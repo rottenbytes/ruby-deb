@@ -6,6 +6,7 @@ require "rubygems/package"
 class Deb
   VERSION="0.1"
 
+  attr_reader :archive
   def initialize(filename, options = {})
     @sourcefile = filename
     @archive = Ar.new(filename)
